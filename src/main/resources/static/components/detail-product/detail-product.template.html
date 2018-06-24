@@ -1,0 +1,69 @@
+<div style="background: linen">
+</div>
+<div class="container">
+    <div class="media  ">
+        <div class="row myDetailImage">
+            <div class="col-md-6  marginkung" >
+                <div class="media-left heightImage">
+                    <p ng-repeat="img in $ctrl.getProductId.imageForms track by $index">
+                        <img class="mariImage" ng-src="{{img.image_Url}}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="media-body ">
+                    <p class="myThuocDetail">{{$ctrl.getProductId.name | uppercase }}</p>
+
+                    <div>
+                        <uib-accordion>
+                            <div uib-accordion-group class="panel-default chitietsanpham" is-open="true">
+                                <uib-accordion-heading>
+                                    <span> <strong>CHI TIẾT SẢN PHẨM</strong></span>
+                                    <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                </uib-accordion-heading>
+                                <ul>
+                                    <li>Hàng chính hãng</li>
+                                    <li>Giá:{{$ctrl.getProductId.price | currency}}</li>
+                                    <li>Màn hình:{{$ctrl.getProductId.size_screen}}</li>
+                                    <li>Màu:{{$ctrl.getProductId.color}}</li>
+                                    <li>Xuất Xứ: {{$ctrl.getProductId.made_in}}</li>
+                                    <li>Pin:{{$ctrl.getProductId.battery_type}}</li>
+                                    <li>Bảo hành:{{$ctrl.getProductId.warranty_period}}</li>
+                                    <li>Ngày sản xuất:{{$ctrl.getProductId.created_date}}</li>
+                                    <li><input type="button" value="+" ng-click="$ctrl.myFunT()"/>
+                                        <input type="button" value="-" ng-click="$ctrl.myFunG()"/>
+                                        <span>SỐ LƯỢNG: {{$ctrl.count}}</span>
+                                        <button class="btn btn-default " style="margin-left: 30px" data-ui-sref="order"> Đặt Mua</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </uib-accordion>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <h2 style="text-align: center">SẢN PHẨM GỢI Ý</h2>
+    <div class="col-sm-4  " ng-repeat="product in $ctrl.products.data | limitTo :6 ">
+        <div class="thumbnail boxModel hover01 column">
+            <figure>
+                <p ng-repeat="img in product.imageForms track by $index  ">
+                    <img ng-src="{{img.image_Url  }}"/>
+                </p>
+            </figure>
+            <h4 class="chitiet"><a data-ui-sref="detail({id: product.id})">Xem Chi Tiết</a></h4>
+            <div class=" caption ">
+                <h3 class="id"><span><a class="myfont"
+                                        data-ui-sref="detail({id: product.id})">{{product.name}}</a></span></h3>
+                <p class="money">{{product.price | currency}}</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

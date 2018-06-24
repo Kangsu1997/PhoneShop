@@ -1,0 +1,39 @@
+.myDetailImage{
+    border-bottom:1px solid #d9d9d9 ;
+}
+.marginkung{
+    margin-top: 40px;
+}
+.heightImage{
+
+    height: 400px;
+    width: 400px;
+    border:1px solid #d9d9d9 ;
+}
+.mariImage{
+    margin-left: 23px;
+    margin-top: 20px;
+    height: 350px;
+}
+.myBorder .list-group-item {
+    text-align: center;
+}
+.panel-group {
+    margin-bottom: 2px;
+}
+.myBtn{
+    margin: 10px;
+
+}
+.myThuocDetail{
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px solid #f7c104;
+}
+.colorDetail h3{
+    color: #f79325;
+}
+.chitietsanpham{
+    border-top: 1px solid #d9d9d9;
+}
+

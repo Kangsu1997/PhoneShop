@@ -1,0 +1,40 @@
+<div class="row" style="margin-top: 100px; margin-bottom: 20px">
+    <div class="col-md-4 ">
+        <h2 style="margin-bottom: 0px;margin-top: 40px">SẢN PHẨM NỔI BẬT</h2>
+    </div>
+    <div class="col-md-8">
+        <form class="form-inline search" ng-submit="$ctrl.search($ctrl.filter)">
+            <div class="form-group">
+                <label class="control-label sr-only">Search</label>
+                <input type="text" class="form-control" ng-model="$ctrl.filter.search">
+            </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<p class="alert-danger alert" ng-if="$ctrl.error.length">
+    {{$ctrl.error}}
+</p>
+
+<div class="container">
+    <div class="col-sm-6 col-sm-3" ng-repeat="product in $ctrl.products.data ">
+        <div class="thumbnail boxModel hover01 column">
+            <figure>
+                <p ng-repeat="img in product.imageForms track by $index">
+                    <img ng-src="{{img.image_Url}}"/>
+                </p>
+            </figure>
+            <h4 class="chitiet"><a data-ui-sref="detail({id: product.id})">Xem Chi Tiết</a></h4>
+            <div class=" caption ">
+                <h3 class="id"><span><a class="myfont"
+                                        data-ui-sref="detailCategory({id: product.id})">
+                    {{product.name}}</a></span></h3>
+                <p class="money">{{product.price | currency}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center">
+    <ul uib-pagination total-items="$ctrl.filter.totalItems" ng-model="$ctrl.filter.page" max-size="5"
+        class="pagination-sm" boundary-link-numbers="true" rotate="false" ng-change="$ctrl.pageChange()"></ul>
+</div>
