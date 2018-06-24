@@ -1,0 +1,168 @@
+<div class="login">
+    <div class="content">
+        <form class="register-form" name="userForm" ng-submit="$ctrl.create(userForm.$valid) " >
+            <h3 class="font-green">Sign Up</h3>
+            <p class="hint"> Enter your personal details below: </p>
+
+            <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine}" >
+
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input class="form-control placeholder-no-fix" type="text" placeholder="Username"
+                               name="username" ng-model="$ctrl.createRegister.username"
+                               ng-minlength="4" ng-maxlength="15" ng-required="true" />
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid "
+                           ng-show="userForm.username.$dirty && userForm.username.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.password.$invalid && !userForm.password.$pristine}">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input type="password" class="form-control placeholder-no-fix "
+                               autocomplete="off" id="register_password"
+                               placeholder="Password"
+                               name="password" ng-show="!showPassword"
+                               ng-required=true ng-model="$ctrl.createRegister.password" ng-minlength="4" ng-maxlength="15">
+                        <label>
+                            <input type="text" name="plainPassword" ng-show="showPassword" class="form-control"
+                                   ng-model="$ctrl.createRegister.password" ng-required=true>
+                        </label>
+
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.password.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.password.$error.minlength" class="help-block">Pass is too short.</p>
+                <p ng-show="userForm.password.$error.maxlength" class="help-block">Passs is too long.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.confirmPassword.$invalid && !userForm.confirmPassword.$pristine}">
+                <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input type="password" class="form-control placeholder-no-fix"
+                               placeholder="Re-type Your Password"
+                               password-confirm match-target="$ctrl.createRegister.password"
+                               autocomplete="off"
+                               required
+                               name="confirmPassword" ng-show="!showPassword"
+                               ng-required=true ng-model="$ctrl.createRegister.confirmPassword" ng-minlength="4" ng-maxlength="15">
+                        <label>
+                            <input type="text" name="plainPassword" ng-show="showPassword" class="form-control"
+                                   ng-model="$ctrl.createRegister.confirmPassword" ng-required=true>
+                        </label>
+
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.confirmPassword.$valid"></i>
+                    </div>
+                </div>
+                <p class="help-block" ng-show="userForm.confirmPassword.$error.match">Passwords do not match.</p>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="showPassword" ng-model="showPassword">
+                <label class="comment" for="showPassword"> Display password</label>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.fullName.$invalid && !userForm.fullName.$pristine}">
+
+                <label class="control-label visible-ie8 visible-ie9">FullName</label>
+
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input class="form-control placeholder-no-fix" type="text"
+                               ng-model="$ctrl.createRegister.fullName" required
+                               placeholder="Full Name" name="fullName"/>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.fullName.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.fullName.$invalid && !userForm.fullName.$pristine" class="help-block">Enter a Invalid Full Name.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.sex.$invalid && !userForm.sex.$pristine}">
+                <label class="control-label visible-ie8 visible-ie9">Sex</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <label>
+                            <select class="form-control" ng-model="$ctrl.createRegister.sex" name="sex">
+                                <option value="">Please choice sex</option>
+                                <option>Male</option>
+                                <option>FelMale</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-1">
+
+                    </div>
+                </div>
+                <p ng-show="userForm.sex.$invalid && !userForm.sex.$pristine" class="help-block">Enter a choice Sex.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.phone.$invalid && !userForm.phone.$pristine}">
+
+                <label class="control-label visible-ie8 visible-ie9">Phone Number</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input type="text" class="form-control placeholder-no-fix"  placeholder="Phone Number" name="phone"
+                               ng-model="$ctrl.createRegister.phone" required>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.phone.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.phone.$invalid && !userForm.phone.$pristine" class="help-block">Enter a Invalid Phone.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.address.$invalid && !userForm.address.$pristine}">
+
+                <label class="control-label visible-ie8 visible-ie9">Address</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input type="text" class="form-control placeholder-no-fix"
+                               placeholder="Address" name="address"
+                               ng-model="$ctrl.createRegister.address" required>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.address.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.address.$invalid && !userForm.address.$pristine" class="help-block">Enter a Invalid address.</p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.email.$invalid && !userForm.email.$pristine}">
+                <label class="control-label visible-ie8 visible-ie9">Email</label>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <input type="text" class="form-control placeholder-no-fix" placeholder="Input Email" name="email"
+                               ng-model="$ctrl.createRegister.email" ng-pattern="/^.+@gmail\.com$/" ng-required=true>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="glyphicon glyphicon-ok valid " ng-show="userForm.email.$valid"></i>
+                    </div>
+                </div>
+                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a Invalid email.</p>
+                <span class="error" ng-show="!userForm.email.$error.required && userForm.email.$error.pattern"> email address is required</span>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="register-back-btn" class="btn green btn-outline" ui-sref="login">Back</button>
+                <button type="submit" id="register-submit-btn"
+                        ng-disabled="userForm.$invalid"
+                        class="btn btn-success uppercase pull-right">Register
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

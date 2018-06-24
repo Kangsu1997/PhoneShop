@@ -1,0 +1,73 @@
+footer {
+    width: 100%;
+    min-width: 1024px;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+    clear: both;
+}
+.rowfoot {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.rowfoot {
+    width: 100%;
+    min-width: 980px;
+    overflow: hidden;
+    background: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+}
+.colfoot {
+    float: left;
+    width: 29%;
+    margin: -2px;
+    position: relative;
+}
+.colfoot li {
+    float: none;
+    position: relative;
+    font-size: 13px;
+    color: #444;
+}
+.colfoot li.showmore {
+    font-weight: bold;
+}
+.colfoot li.hidden {
+    display: none;
+}
+.colfoot li p {
+    width: auto;
+    display: block;
+    padding-top: 5px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #666;
+}
+.collast {
+    width: 11%;
+    float: right;
+}
+.group {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+.group label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+.colfoot li a {
+    display: block;
+    color: #288ad6;
+    font-size: 14px;
+    line-height: 25px;
+    padding-top: 5px;
+}
