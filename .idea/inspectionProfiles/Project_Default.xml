@@ -1,0 +1,45 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="11">
+            <item index="0" class="java.lang.String" itemvalue="boundary-link-numbers" />
+            <item index="1" class="java.lang.String" itemvalue="total-items" />
+            <item index="2" class="java.lang.String" itemvalue="ng-model" />
+            <item index="3" class="java.lang.String" itemvalue="max-size" />
+            <item index="4" class="java.lang.String" itemvalue="rotate" />
+            <item index="5" class="java.lang.String" itemvalue="ng-change" />
+            <item index="6" class="java.lang.String" itemvalue="is-open" />
+            <item index="7" class="java.lang.String" itemvalue="align" />
+            <item index="8" class="java.lang.String" itemvalue="ng-disabled" />
+            <item index="9" class="java.lang.String" itemvalue="uib-accordion-header" />
+            <item index="10" class="java.lang.String" itemvalue="match-target" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="9">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="uib-accordion" />
+            <item index="7" class="java.lang.String" itemvalue="uib-accordion-heading" />
+            <item index="8" class="java.lang.String" itemvalue="h3" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="MavenModelInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>
